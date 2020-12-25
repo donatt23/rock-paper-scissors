@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+    width: 18px;
+    height: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #2a2a2a;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 187, 0);
+    border-radius: 20px;
+    border: 2px solid black;
+    background-clip: content-box;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 30px;
+}
+
+.game__panel {
+    min-height: 100vh;
+    width: 100vw;
+    padding: 50px 0;
+    background-color: #2a2a2a;
+    color: white;
+}
+
+.game__title {
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+.scoreboard {
+    padding: 120px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.scoreboard__player {
+    text-align: center;
+}
+
+.scoreboard__player .player__name {
+    font-size: 1.7em;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.scoreboard__player .player__score {
+    font-size: 1.6em;
+}
+
+.game__text-wrapper {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+
+.game__text-wrapper p.game__winner-text {
+    font-size: 1.3em;
+}
+
+
+.game__choices-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.game__choices-wrapper img.choice {
+    max-width: 250px;
+    margin: 0 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 4px solid black;
+    user-select: none;
+}
+
+.animate {
+    animation: choiceFlipping 1s;
+}
+
+img.choice.win {
+    border: 4px solid rgb(0, 230, 69);
+}
+
+img.choice.lose {
+    border: 4px solid red;
+}
+
+img.choice.draw {
+    border: 4px solid rgb(255, 208, 0);
+}
+
+img.disable {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.game__panel__button {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.game__panel__button .restart-btn {
+    padding: 12px 30px;
+    text-align: center;
+    cursor: pointer;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid rgb(0, 192, 74);
+    border-radius: 4px;
+    outline: none;
+    margin: 0 auto;
+    font-size: 1.1em;
+    user-select: none;
+    transition: background-color .3s, box-shadow .3s;
+}
+
+.game__panel__button .restart-btn:hover {
+    background-color: rgb(0, 192, 74);
+}
+
+@keyframes choiceFlipping {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(1080deg);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .game__panel {
+        font-size: 13px;
+    }
+
+    .game__choices-wrapper img.choice {
+        width: 120px;
+        margin: 0 15px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+
+    .game__choices-wrapper img.choice {
+        width: 80px;
+        margin: 0 5px;
+    }
+}

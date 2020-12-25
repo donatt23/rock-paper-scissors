@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game__panel">
+        <div class="container">
+            
+            <h1 class="game__title">Rock - Paper - Scissors</h1>
+
+            <div class="scoreboard">
+                <div class="scoreboard__player">
+                    <h5 class="player__name player-one">You</h5>
+                    <p class="player__score player-one">0</p>
+                </div>
+                <div class="scoreboard__player">
+                    <h5 class="player__name player-two">Computer</h5>
+                    <p class="player__score player-two">0</p>
+                </div>
+            </div>
+
+            <div class="game__text-wrapper">
+                <p class="game__winner-text">Choose an option to start the game</p>
+            </div>
+
+            <div class="game__choices-wrapper">
+                <img class="choice rock" data-choice="rock" src="./images/rock.png" alt="Rock">
+                <img class="choice paper" data-choice="paper" src="./images/paper.png" alt="Paper">
+                <img class="choice scissors" data-choice="scissors" src="./images/scissors.png" alt="Scissors">
+            </div>
+
+            <div class="game__panel__button">
+                <button class="restart-btn">Restart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
